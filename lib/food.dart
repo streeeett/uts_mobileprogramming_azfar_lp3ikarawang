@@ -63,7 +63,84 @@ class food extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(data)
+                      Text('#${order['category']}',
+                      style: TextStyle(
+                        color: Colors.deepOrange,
+                        fontSize: 16,
+                      ),
+                      ),
+
+                      Text(
+                        order['title'],
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87
+                        ),
+                      ),
+                      
+                      Text(
+                        'ID : ${order['id']}',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueGrey
+                        ),
+                      ),
+                      
+
+                      Row(
+                        children: [
+                          Text('\$${order['price']}',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+
+                          SizedBox(
+                            width: 80,
+                            height: 40,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.deepOrange,
+                                    foregroundColor: Colors.white,
+                                    padding: EdgeInsets.zero,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  child: const Text('Done'),
+                                ),
+                            ),
+                          ),
+
+                          SizedBox(
+                            width: 80,
+                            height: 40,
+                            child: Expanded(
+                              child: OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    foregroundColor: Colors.red,
+                                    padding: EdgeInsets.zero,
+                                    side: const BorderSide(
+                                      color: Colors.red,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  child: const Text('Cancel'),
+                                ),
+                            ),
+                          )
+                        ],
+                      )
                     ],
                   ))
                 ],
