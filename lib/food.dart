@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 final List<Map<String, dynamic>> dummyOrders = [
   {
     'id': 32053,
@@ -16,7 +15,7 @@ final List<Map<String, dynamic>> dummyOrders = [
     'title': 'Beef Burger with Fries',
     'price': 45,
     'imageUrl': 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80',
-     'status': 'pending',
+    'status': 'pending',
   },
   {
     'id': 32055,
@@ -36,12 +35,43 @@ final List<Map<String, dynamic>> dummyOrders = [
   },
 ];
 
-
 class food extends StatelessWidget {
   const food({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Container(
+        child: ListView.builder(
+          itemCount: dummyOrders.length,
+          itemBuilder: (context, index) {
+            final order = dummyOrders[index];
+
+            return Container(
+              margin: const EdgeInsets.only(bottom: 25),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                order['imageUrl'],
+                width: 120,
+                height: 140,
+                fit: BoxFit.cover,),
+
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(data)
+                    ],
+                  ))
+                ],
+              ),
+            );
+          },
+        ),
+      ),
+    );
   }
 }
