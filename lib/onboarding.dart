@@ -41,7 +41,36 @@ class OnboardingPage extends StatelessWidget {
               fontSize: 14,
               color: Colors.blueGrey,
               height: 1.5
-            ),)
+            ),),
+
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {}, 
+                child: Text('Next', 
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold
+                ),),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrange,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                
+                ),
+            ),
+
+            TextButton(onPressed: () {}, 
+            child: Text('Skip',
+            style: TextStyle(
+              color: Colors.blueGrey,
+              fontSize: 16),
+            ),
+            )
           ],
         ),
       ),
