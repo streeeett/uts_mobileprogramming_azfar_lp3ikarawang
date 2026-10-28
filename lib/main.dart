@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_mobileprogramming_azfar_lp3ikarawang/food.dart';
 import 'package:uts_mobileprogramming_azfar_lp3ikarawang/onBoarding.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingPage(),
+      home: food(),
     );
   }
 }

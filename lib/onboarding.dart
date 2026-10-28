@@ -6,7 +6,7 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.orange,
       body: Container(
         margin: const EdgeInsets.all(20),
           padding: const EdgeInsets.all(20),
@@ -14,7 +14,7 @@ class OnboardingPage extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(35),
           border: Border.all(
-            color: Colors.orange.shade300,
+            color: Colors.white,
             width: 3,
           ),
         ),
@@ -39,7 +39,7 @@ class OnboardingPage extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.blueGrey,
+              color: Colors.blueGrey.shade400,
               height: 1.5
             ),),
 
